@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Хутор Вуорио | Гостевой дом в Вуорио для отдыха у воды</title>
+    <title>Хутор Вуорио — гостевой дом на Ладожском озере</title>
     <meta
       name="description"
-      content="Хутор Вуорио — гостевой дом в Карелии у воды. Тихий отдых, веранда, мангал, оборудованная кухня и комфортное размещение для спокойных выходных на природе."
+      content="Тихий отдых у воды на Ладоге: частный пляж, веранда, мангал и общая кухня. До 10 человек, новый дом 2023 года. Проверьте свободные даты."
     />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Хутор Вуорио | Гостевой дом в Вуорио для отдыха у воды" />
+    <meta property="og:title" content="Хутор Вуорио — гостевой дом на Ладожском озере" />
     <meta
       property="og:description"
-      content="Уютный дом для спокойного отдыха в Вуорио: природа, берег рядом, веранда, зона барбекю и прямой переход к бронированию."
+      content="Тихий отдых у воды на Ладоге: частный пляж, веранда, мангал и общая кухня. До 10 человек, новый дом 2023 года. Проверьте свободные даты."
     />
     <meta property="og:image" content="assets/img/fullscreen/1.jpeg" />
     <meta name="theme-color" content="#1f3027" />
@@ -22,7 +22,47 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f3027'/%3E%3Cpath d='M8 23V9h4v5h8V9h4v14h-4v-5h-8v5z' fill='%23f4ead8'/%3E%3C/svg%3E"
     />
     <script>
+      window.ASSET_VERSION = "1";
+
       document.documentElement.classList.add("js");
+
+      function isLocalAssetUrl(value) {
+        return Boolean(value) && !/^(?:[a-z][a-z\d+.-]*:|\/\/|#|mailto:|tel:|data:|about:)/i.test(value);
+      }
+
+      function withCacheBustedAsset(value) {
+        if (!isLocalAssetUrl(value) || !window.ASSET_VERSION) {
+          return value;
+        }
+
+        const hashIndex = value.indexOf("#");
+        const pathAndQuery = hashIndex === -1 ? value : value.slice(0, hashIndex);
+        const hash = hashIndex === -1 ? "" : value.slice(hashIndex);
+        const queryIndex = pathAndQuery.indexOf("?");
+        const path = queryIndex === -1 ? pathAndQuery : pathAndQuery.slice(0, queryIndex);
+        const query = queryIndex === -1 ? "" : pathAndQuery.slice(queryIndex + 1);
+        const params = new URLSearchParams(query);
+
+        if (params.get("v") === window.ASSET_VERSION) {
+          return value;
+        }
+
+        params.set("v", window.ASSET_VERSION);
+
+        return `${path}?${params.toString()}${hash}`;
+      }
+
+      function loadStylesheet(path) {
+        document.write(`<link rel="stylesheet" href="${withCacheBustedAsset(path)}" />`);
+      }
+
+      function loadScript(path) {
+        const script = document.createElement("script");
+
+        script.src = withCacheBustedAsset(path);
+        script.async = false;
+        document.body.append(script);
+      }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,9 +70,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="vendor/lightgallery/css/lightgallery-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <script>
+      loadStylesheet("vendor/swiper/swiper-bundle.min.css");
+      loadStylesheet("vendor/lightgallery/css/lightgallery-bundle.min.css");
+      loadStylesheet("styles.css");
+    </script>
   </head>
   <body>
     <div class="page-grain" aria-hidden="true"></div>
@@ -531,10 +573,12 @@
       </div>
     </footer>
 
-    <script src="vendor/swiper/swiper-bundle.min.js" defer></script>
-    <script src="vendor/lightgallery/js/lightgallery.min.js" defer></script>
-    <script src="vendor/lightgallery/js/plugins/lg-thumbnail.min.js" defer></script>
-    <script src="vendor/lightgallery/js/plugins/lg-zoom.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script>
+      loadScript("vendor/swiper/swiper-bundle.min.js");
+      loadScript("vendor/lightgallery/js/lightgallery.min.js");
+      loadScript("vendor/lightgallery/js/plugins/lg-thumbnail.min.js");
+      loadScript("vendor/lightgallery/js/plugins/lg-zoom.min.js");
+      loadScript("script.js");
+    </script>
   </body>
 </html>

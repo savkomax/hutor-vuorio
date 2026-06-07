@@ -1,8 +1,9 @@
 const siteData = {
-  bookingUrl: "https://example.com/replace-bnovo-link",
-  address: "Республика Карелия, Сортавальский муниципальный округ, посёлок Вуорио, 18",
+  bookingUrl:
+    "https://reservationsteps.ru/rooms/index/b7187344-e29b-437b-9485-1fd16c170a74",
+  address:
+    "Республика Карелия, Сортавальский муниципальный округ, посёлок Вуорио, 18",
   phone: "+7 (999) 000-00-00",
-  email: "replace@example.com",
   mapEmbedUrl:
     "https://yandex.ru/map-widget/v1/?ll=30.655948%2C61.663496&z=14&pt=30.655948%2C61.663496%2Cpm2rdm&lang=ru_RU",
   reviews: [
@@ -39,7 +40,7 @@ const siteData = {
       date: "6 октября 2025",
       rating: 5,
       source: "Яндекс Путешествия",
-      text: "Чисто, интерьер без излишеств, но уютно, живописное место на берегу. По желанию, через хозяев, можно заказать экскурсию по шхерам и на Валаам. Возможно заказать новинку-\"Фурако\".",
+      text: 'Чисто, интерьер без излишеств, но уютно, живописное место на берегу. По желанию, через хозяев, можно заказать экскурсию по шхерам и на Валаам. Возможно заказать новинку-"Фурако".',
     },
   ],
 };
@@ -77,7 +78,81 @@ const selectors = {
   reveal: "[data-reveal]",
 };
 
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
+function applyAssetVersions() {
+  const versionAsset =
+    typeof window.withCacheBustedAsset === "function"
+      ? window.withCacheBustedAsset
+      : (value) => value;
+
+  const updateAttribute = (node, attributeName, formatter = versionAsset) => {
+    const currentValue = node.getAttribute(attributeName);
+    const nextValue = formatter(currentValue);
+
+    if (currentValue && nextValue !== currentValue) {
+      node.setAttribute(attributeName, nextValue);
+    }
+  };
+
+  const updateSrcset = (value) => {
+    if (!value) {
+      return value;
+    }
+
+    return value
+      .split(",")
+      .map((candidate) => {
+        const parts = candidate.trim().split(/\s+/);
+
+        if (!parts[0]) {
+          return candidate;
+        }
+
+        parts[0] = versionAsset(parts[0]);
+
+        return parts.join(" ");
+      })
+      .join(", ");
+  };
+
+  document
+    .querySelectorAll(
+      "img[src], source[src], video[src], audio[src], iframe[src]",
+    )
+    .forEach((node) => {
+      updateAttribute(node, "src");
+    });
+
+  document.querySelectorAll("img[srcset], source[srcset]").forEach((node) => {
+    updateAttribute(node, "srcset", updateSrcset);
+  });
+
+  document.querySelectorAll("a[href]").forEach((node) => {
+    updateAttribute(node, "href");
+  });
+
+  document.querySelectorAll("[style]").forEach((node) => {
+    const currentValue = node.getAttribute("style");
+
+    if (!currentValue || !currentValue.includes("url(")) {
+      return;
+    }
+
+    const nextValue = currentValue.replace(
+      /url\(\s*(["']?)([^"')]+)\1\s*\)/g,
+      (_match, _quote, url) => {
+        return `url("${versionAsset(url)}")`;
+      },
+    );
+
+    if (nextValue !== currentValue) {
+      node.setAttribute("style", nextValue);
+    }
+  });
+}
 
 function applySiteData() {
   document.querySelectorAll(selectors.bookingLinks).forEach((link) => {
@@ -560,6 +635,7 @@ function initReveal() {
   revealNodes.forEach((node) => observer.observe(node));
 }
 
+applyAssetVersions();
 applySiteData();
 renderReviews();
 initHeroSlides();
