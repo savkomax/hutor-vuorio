@@ -11,6 +11,8 @@
   --color-forest: #24342c;
   --color-forest-soft: #31453b;
   --color-gold: #d8b77f;
+  --hero-overlay-color: 15, 22, 18;
+  --hero-overlay-opacity: 0.62;
   --shadow-soft: 0 18px 46px rgba(34, 39, 35, 0.12);
   --radius-sm: 1.4rem;
   --radius-md: 2rem;
@@ -483,10 +485,7 @@ p {
 }
 
 .hero-overlay {
-  background:
-    linear-gradient(105deg, rgba(15, 22, 18, 0.78) 0%, rgba(15, 22, 18, 0.46) 45%, rgba(15, 22, 18, 0.72) 100%),
-    linear-gradient(180deg, rgba(11, 18, 15, 0.24) 0%, rgba(11, 18, 15, 0.58) 100%),
-    radial-gradient(circle at 18% 18%, rgba(216, 183, 127, 0.14), transparent 28%);
+  background: rgba(var(--hero-overlay-color), var(--hero-overlay-opacity));
 }
 
 .hero-layout {
