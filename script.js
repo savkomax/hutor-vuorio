@@ -3,7 +3,9 @@ const siteData = {
     "https://reservationsteps.ru/rooms/index/b7187344-e29b-437b-9485-1fd16c170a74",
   address:
     "Республика Карелия, Сортавальский муниципальный округ, посёлок Вуорио, 18",
-  phone: "+7 (999) 000-00-00",
+  phone: "+7 (921) 524-68-70",
+  secondaryPhone: "+7 911 432-31-40",
+  email: "xutor.vuorio@inbox.ru",
   mapEmbedUrl:
     "https://yandex.ru/map-widget/v1/?ll=30.655948%2C61.663496&z=14&pt=30.655948%2C61.663496%2Cpm2rdm&lang=ru_RU",
   reviews: [
@@ -49,6 +51,8 @@ const selectors = {
   bookingLinks: "[data-booking-link]",
   phoneText: "[data-phone]",
   phoneLinks: "[data-phone-link]",
+  secondaryPhoneText: "[data-secondary-phone]",
+  secondaryPhoneLinks: "[data-secondary-phone-link]",
   emailText: "[data-email]",
   emailLinks: "[data-email-link]",
   address: "[data-address]",
@@ -167,6 +171,14 @@ function applySiteData() {
 
   document.querySelectorAll(selectors.phoneLinks).forEach((link) => {
     link.href = `tel:${siteData.phone.replace(/[^\d+]/g, "")}`;
+  });
+
+  document.querySelectorAll(selectors.secondaryPhoneText).forEach((node) => {
+    node.textContent = siteData.secondaryPhone;
+  });
+
+  document.querySelectorAll(selectors.secondaryPhoneLinks).forEach((link) => {
+    link.href = `tel:${siteData.secondaryPhone.replace(/[^\d+]/g, "")}`;
   });
 
   document.querySelectorAll(selectors.emailText).forEach((node) => {

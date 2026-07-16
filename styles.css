@@ -1232,6 +1232,13 @@ p {
   gap: 0.75rem;
 }
 
+.footer-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.85rem;
+}
+
 .footer-contact span {
   color: rgba(255, 238, 212, 0.46);
   font-size: 0.72rem;
@@ -1240,14 +1247,17 @@ p {
   text-transform: uppercase;
 }
 
-.footer-phone {
+.footer-phone,
+.footer-email {
   color: rgba(255, 246, 233, 0.84);
   font-weight: 700;
   text-decoration: none;
 }
 
 .footer-phone:hover,
-.footer-phone:focus-visible {
+.footer-phone:focus-visible,
+.footer-email:hover,
+.footer-email:focus-visible {
   color: rgba(255, 225, 181, 0.96);
 }
 
@@ -1659,6 +1669,12 @@ p {
   }
 
   .footer-contact {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .footer-contact-links {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.35rem;
