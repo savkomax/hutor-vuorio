@@ -4,7 +4,7 @@ const siteData = {
   address:
     "Республика Карелия, Сортавальский муниципальный округ, посёлок Вуорио, 18",
   phone: "+7 (921) 524-68-70",
-  secondaryPhone: "+7 911 432-31-40",
+  secondaryPhone: "+7 (911) 432-31-40",
   email: "xutor.vuorio@inbox.ru",
   mapEmbedUrl:
     "https://yandex.ru/map-widget/v1/?ll=30.655948%2C61.663496&z=14&pt=30.655948%2C61.663496%2Cpm2rdm&lang=ru_RU",
