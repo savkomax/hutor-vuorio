@@ -295,6 +295,45 @@ p {
   margin-left: auto;
 }
 
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.15rem;
+  color: rgba(255, 250, 240, 0.9);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition:
+    color var(--ease),
+    background-color var(--ease),
+    border-color var(--ease),
+    box-shadow var(--ease);
+}
+
+.header-phone-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.site-header.is-scrolled .header-phone {
+  color: var(--color-forest);
+}
+
+.header-phone:hover,
+.header-phone:focus-visible {
+  color: #fff;
+}
+
+.site-header.is-scrolled .header-phone:hover,
+.site-header.is-scrolled .header-phone:focus-visible {
+  color: var(--color-accent-strong);
+}
+
 .header-booking {
   min-height: 3.2rem;
   margin: 0;
@@ -1532,6 +1571,46 @@ p {
 @media (max-width: 560px) {
   :root {
     --container: min(100% - 2rem, 100%);
+  }
+
+  .header-actions {
+    gap: 0.55rem;
+  }
+
+  .header-phone {
+    justify-content: center;
+    width: 3.1rem;
+    height: 3.1rem;
+    min-height: 3.1rem;
+    padding: 0;
+    border: 1px solid rgba(255, 248, 236, 0.22);
+    border-radius: 50%;
+    background: rgba(255, 248, 236, 0.12);
+    backdrop-filter: blur(18px);
+  }
+
+  .header-phone-number {
+    display: none;
+  }
+
+  .site-header.is-scrolled .header-phone {
+    border-color: rgba(42, 58, 48, 0.16);
+    background: rgba(255, 250, 241, 0.72);
+  }
+
+  .header-phone:hover,
+  .header-phone:focus-visible {
+    background: rgba(255, 248, 236, 0.18);
+    border-color: rgba(255, 248, 236, 0.34);
+    box-shadow:
+      0 12px 24px rgba(9, 13, 11, 0.16),
+      0 0 0 3px rgba(134, 97, 69, 0.16);
+  }
+
+  .site-header.is-scrolled .header-phone:hover,
+  .site-header.is-scrolled .header-phone:focus-visible {
+    border-color: rgba(42, 58, 48, 0.24);
+    background: rgba(255, 250, 241, 0.9);
   }
 
   .brand-name {
