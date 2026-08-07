@@ -78,7 +78,9 @@ const selectors = {
   heroSlides: "[data-hero-slide]",
   houseSwiper: "[data-house-swiper]",
   houseThumbs: "[data-house-thumbs]",
-  lightGallery: "[data-lightgallery]",
+  lightGalleries: "[data-lightgallery]",
+  achievementsGallery: "[data-achievements-gallery]",
+  achievementItems: "[data-achievement-item]",
   reveal: "[data-reveal]",
 };
 
@@ -529,28 +531,79 @@ function initHouseSwiper() {
   });
 }
 
-function initLightGallery() {
-  const galleryEl = document.querySelector(selectors.lightGallery);
-  const lightGallery = window.lightGallery;
+function prepareAchievementsGallery() {
+  const galleryEl = document.querySelector(selectors.achievementsGallery);
 
-  if (!galleryEl || !lightGallery) {
+  if (!galleryEl) {
     return;
   }
 
-  lightGallery(galleryEl, {
-    selector: "a",
-    plugins: [window.lgZoom, window.lgThumbnail].filter(Boolean),
-    speed: 420,
-    download: false,
-    thumbnail: true,
-    animateThumb: true,
-    thumbWidth: 96,
-    thumbHeight: "72px",
-    mobileSettings: {
-      controls: true,
-      showCloseIcon: true,
+  const items = Array.from(
+    galleryEl.querySelectorAll(selectors.achievementItems),
+  );
+  const visibleItemCount = 3;
+
+  items.forEach((item, index) => {
+    const isHidden = index >= visibleItemCount;
+
+    item.classList.toggle("achievement-card-hidden", isHidden);
+
+    if (isHidden) {
+      item.tabIndex = -1;
+      item.setAttribute("aria-hidden", "true");
+    }
+  });
+
+  if (items.length <= visibleItemCount) {
+    return;
+  }
+
+  const moreCard = items[visibleItemCount - 1];
+  const moreContent = document.createElement("span");
+
+  moreCard.classList.add("achievement-card-more");
+  moreCard.setAttribute(
+    "aria-label",
+    `Смотреть все фотографии достижений: ${items.length} фото`,
+  );
+  moreContent.className = "achievement-more-content";
+  moreContent.setAttribute("aria-hidden", "true");
+  moreContent.innerHTML = `
+    <span class="achievement-more-count">${items.length} фото</span>
+    <span class="achievement-more-title">Смотреть все фото</span>
+  `;
+  moreCard.append(moreContent);
+}
+
+function initLightGallery() {
+  const galleryEls = document.querySelectorAll(selectors.lightGalleries);
+  const lightGallery = window.lightGallery;
+
+  if (!galleryEls.length || !lightGallery) {
+    return;
+  }
+
+  galleryEls.forEach((galleryEl) => {
+    const isAchievementsGallery = galleryEl.matches(
+      selectors.achievementsGallery,
+    );
+
+    lightGallery(galleryEl, {
+      selector: "a",
+      plugins: [window.lgZoom, window.lgThumbnail].filter(Boolean),
+      speed: 420,
       download: false,
-    },
+      getCaptionFromTitleOrAlt: !isAchievementsGallery,
+      thumbnail: true,
+      animateThumb: true,
+      thumbWidth: 96,
+      thumbHeight: "72px",
+      mobileSettings: {
+        controls: true,
+        showCloseIcon: true,
+        download: false,
+      },
+    });
   });
 }
 
@@ -590,7 +643,7 @@ function initMobileNav() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 1100) {
       closeNav();
     }
   });
@@ -652,6 +705,7 @@ applySiteData();
 renderReviews();
 initHeroSlides();
 initHouseSwiper();
+prepareAchievementsGallery();
 initLightGallery();
 initReviewsSwiper();
 initReviewModal();
