@@ -55,6 +55,7 @@ img {
   display: block;
   width: 100%;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -145,6 +146,15 @@ code {
   max-width: 20ch;
   color: var(--color-ink);
   text-wrap: balance;
+}
+
+.section-intro {
+  max-width: 40rem;
+  color: var(--color-ink-soft);
+}
+
+.achievements .section-intro {
+  color: rgba(255, 248, 237, 0.72);
 }
 
 h1,
@@ -523,6 +533,13 @@ p {
   transform: scale(1);
 }
 
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero-overlay {
   background: rgba(var(--hero-overlay-color), var(--hero-overlay-opacity));
 }
@@ -543,6 +560,14 @@ p {
   gap: 1.2rem;
   max-width: 42rem;
   color: #fff8ef;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-gold);
 }
 
 .hero-title {
@@ -1404,6 +1429,83 @@ p {
   background: rgba(134, 97, 69, 0.32);
 }
 
+.reviews-all-link {
+  align-self: flex-start;
+  font-weight: 800;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(134, 97, 69, 0.35);
+  text-underline-offset: 0.3em;
+  transition: color var(--ease), text-decoration-color var(--ease);
+}
+
+.reviews-all-link:hover,
+.reviews-all-link:focus-visible {
+  color: var(--color-accent-strong);
+  text-decoration-color: currentColor;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 54rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(39, 56, 46, 0.08);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 251, 245, 0.76);
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--radius-sm);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform var(--ease);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.faq-item p {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--color-ink-soft);
+}
+
+.faq-item a {
+  color: var(--color-accent-strong);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 @media (max-width: 1240px) {
   .review-button-prev {
     left: 0.4rem;
@@ -1813,6 +1915,7 @@ p {
 
   .hero-title {
     max-width: 9.4ch;
+    font-size: clamp(2.6rem, 13vw, 3.2rem);
   }
 
   .section-title {

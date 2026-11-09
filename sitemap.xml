@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://xutorvuorio.ru/</loc>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://xutorvuorio.ru/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/dom-i-territoriya.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/fasad-doma.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/gostinaya-obedennyy-stol.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/kostrovaya-zona.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/kuhnya-gostinaya.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/kuhnya-tehnika.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/prichal-i-lodka.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/sanuzel-s-dushem.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/spalnya.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/about/vtoroy-etazh.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/achievements/rybak-s-dvumya-shchukami.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/achievements/rybak-so-shchukoy.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/achievements/ulov-shchuk.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/fullscreen/bereg-ladogi-vuorio.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/fullscreen/dom-na-beregu-ladogi.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/fullscreen/gostevoy-dom-hutor-vuorio.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/fullscreen/pirs-i-sapy-na-ladoge.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/fullscreen/zakat-na-ladozhskom-ozere.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/bereg-ladogi-letom.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/dom-zimney-nochyu.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/dom-zimoy.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/kater-u-prichala.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/kater-u-skal.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/koster-u-vody.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/kupel-furako.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/kupel-vecherom.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/pirs-i-sapy.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/ponton-i-lodka.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/prichal-i-kostrovaya-zona.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/prichal-zimoy.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/sad-u-doma.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/sapy-na-uchastke.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/shashlyk-na-mangale.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/skameyki-u-vody.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/sosny-na-beregu.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/tuman-nad-ladogoy.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/uzhin-s-vidom-na-ladogu.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/vozdushnyy-shar.webp</image:loc></image:image>
+    <image:image><image:loc>https://xutorvuorio.ru/assets/img/photos/zaliv-osenyu.webp</image:loc></image:image>
+  </url>
 </urlset>

@@ -8,50 +8,6 @@ const siteData = {
   email: "xutor.vuorio@inbox.ru",
   mapEmbedUrl:
     "https://yandex.ru/map-widget/v1/?ll=30.655948%2C61.663496&z=14&pt=30.655948%2C61.663496%2Cpm2rdm&lang=ru_RU",
-  reviews: [
-    {
-      name: "Галина",
-      date: "20 октября 2026",
-      rating: 5,
-      source: "Авито",
-      text: "Отдыхали на хуторе Вуорио с 16 по 18 октября, провели здесь двое суток большой компанией и остались очень довольны! ❤️\nНас было 11 человек — 8 взрослых, 3 ребёнка и наша собачка Лор. Все разместились с комфортом, места хватило каждому!\nОчень удобное расположение — сюда легко добраться и из Карелии, и из Санкт-Петербурга. У нас как раз так и получилось: часть гостей приехала из Петрозаводска, а часть — из Питера. Отличное место, чтобы встретиться и провести время вместе!\nВ доме чисто и уютно, есть всё необходимое. Удобные кровати, мягкие подушки, чистые полотенца, тёплые полы, хороший напор воды. На кухне достаточно посуды и столовых приборов даже для нашей компании. Всё продумано, чтобы можно было просто отдыхать и ни о чём не переживать. Территория большая и просторная. Мы приехали на четырёх машинах — все спокойно разместились. Во дворе есть мангальная зона, готовили шашлыки и коптили рыбу. А какая здесь природа! Сосны, Ладожское озеро, красивейший вид, пирс. 🎣 Рыбалка тоже удалась\nОтдельное спасибо хозяину Андрею за гостеприимство и за то, что разрешил приехать с нашей Лорой! 🐾 Очень приятно, когда рады не только гостям, но и их четвероногим друзьям.\nОтдых получился замечательным — с душевными разговорами, вкусной едой, рыбалкой и прекрасной природой вокруг.\nУезжали с отличными впечатлениями и желанием обязательно вернуться! Спасибо за такой чудесный отдых!",
-    },
-    {
-      name: "Стас",
-      date: "4 февраля 2026",
-      rating: 5,
-      source: "Яндекс Путешествия",
-      text: "Дом шикарный, уютный и есть всё необходимое. Что не мало важно это 2 санузла с душевыми на первом этаже и 1 сан узел на втором этаже, для большой компании очень кстати. Мне кажется, фото не передают красоты участка и самого дома в целом. Что поразило в первую очередь, это чистота в доме, жена нечаянно уронила карандаш за комод в спальной комнате, и, отодвинув его, мы удивились, что там ни пылинки (удивились, так как не первый раз арендуем дома и нигде такой чистоты не встречали), ну и, соответственно, чистота на участке. С владельцем общение приятное, по любому вопросу всегда на связи, также он нам организовал прогулку на катере, которая тоже очень понравилась, и нам очень повезло с капитаном, Степан профессионал своего дела и очень интересно рассказывал про все достопримечательности и историю региона. Буду советовать всем друзьям и знакомым именно этот дом.",
-    },
-    {
-      name: "Алена А.",
-      date: "20 июня 2024",
-      rating: 5,
-      source: "Яндекс Путешествия",
-      text: "Шикарное место на берегу озера. Большой просторный дом, есть все необходимое. Были большой семьей- все очень понравилось. Вечерами можно пожарить шашлычок, просто посидеть у костра, наслаждаясь видом. Если нужны водные экскурсии, катер забирает прямо от мостика.",
-    },
-    {
-      name: "Светлана",
-      date: "9 сентября 2023",
-      rating: 5,
-      source: "Яндекс Путешествия",
-      text: "Надо ли говорить, что вся семья уже очень скучает по дням, проведенным в этот прекрасном доме. В начале сентября мы отдыхали там трое суток, компанией 6 взрослых. Место невероятной красоты, вот прям дух захватывает! особенно если вы- горожанин и южанин. Дом большой, современный ремонт, всё очень функционально, На пером этаже два с/узла с душевыми, большая кухня со всеми необходимыми для приготовления пищи предметами, стиралка. Большой удобный диван, хороший телевизор с выходом в интернет, два холодильника. одна из спален тоже на первом этаже. На втором- три спальни и с/узел. Лестница удобная, просторная. все спальни просторные, хорошие кровати, подушки, белоснежное бельё и полотенца. Но самое важное и самое ошеломляющее-это вид на залив, огромный двор , яблоневый сад, просто нереальный простор и километры красоты. Прям со двора выход на озеро, уточки плавают, мы катались на сапе, очень удобный заход, спокойно можно купаться. Эсть два лобных места с кострищами. наверху и внизу ,у озера, мангальная зона. Ужинать у костра, любуясь отражением звёзд в озере-волшебно. В общем- место невероятное, мы влюблены. Комфорт, красота, функционал, адектватный хозяин. Рекомендую 100%! До магазина минут 5-7 на машине, магазины на любой вкус, до центра Сортавалы-10 минут. Из минусов-туповатые ножи и шум от трассы( дом стоит прям у дороги), но по факту, это мешало только мне, остальные даже не заметили. Кстати, рядом сплошь лес с грибами и ягодами, волшебным воздухом и невероятным цветом растительности.",
-    },
-    {
-      name: "Андрей",
-      date: "30 октября 2024",
-      rating: 5,
-      source: "Яндекс Путешествия",
-      text: "Очень уютный домик. Всё по домашнему! Рекомендую. Чисто, просторно, тепло. Вид из окна прекрасный. Есть место для костра и мангальная зона. В общем 10 из 10!",
-    },
-    {
-      name: "Анатолий",
-      date: "6 октября 2025",
-      rating: 5,
-      source: "Яндекс Путешествия",
-      text: 'Чисто, интерьер без излишеств, но уютно, живописное место на берегу. По желанию, через хозяев, можно заказать экскурсию по шхерам и на Валаам. Возможно заказать новинку-"Фурако".',
-    },
-  ],
 };
 
 const selectors = {
@@ -70,7 +26,8 @@ const selectors = {
   header: "[data-header]",
   hero: ".hero",
   reviewSwiper: "[data-reviews-swiper]",
-  reviewTrack: "[data-review-track]",
+  reviewCards: "[data-review-card]",
+  reviewMore: "[data-review-more]",
   reviewPrev: "[data-review-prev]",
   reviewNext: "[data-review-next]",
   reviewModal: "[data-review-modal]",
@@ -94,78 +51,6 @@ const selectors = {
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
-
-function applyAssetVersions() {
-  const versionAsset =
-    typeof window.withCacheBustedAsset === "function"
-      ? window.withCacheBustedAsset
-      : (value) => value;
-
-  const updateAttribute = (node, attributeName, formatter = versionAsset) => {
-    const currentValue = node.getAttribute(attributeName);
-    const nextValue = formatter(currentValue);
-
-    if (currentValue && nextValue !== currentValue) {
-      node.setAttribute(attributeName, nextValue);
-    }
-  };
-
-  const updateSrcset = (value) => {
-    if (!value) {
-      return value;
-    }
-
-    return value
-      .split(",")
-      .map((candidate) => {
-        const parts = candidate.trim().split(/\s+/);
-
-        if (!parts[0]) {
-          return candidate;
-        }
-
-        parts[0] = versionAsset(parts[0]);
-
-        return parts.join(" ");
-      })
-      .join(", ");
-  };
-
-  document
-    .querySelectorAll(
-      "img[src], source[src], video[src], audio[src], iframe[src]",
-    )
-    .forEach((node) => {
-      updateAttribute(node, "src");
-    });
-
-  document.querySelectorAll("img[srcset], source[srcset]").forEach((node) => {
-    updateAttribute(node, "srcset", updateSrcset);
-  });
-
-  document.querySelectorAll("a[href]").forEach((node) => {
-    updateAttribute(node, "href");
-  });
-
-  document.querySelectorAll("[style]").forEach((node) => {
-    const currentValue = node.getAttribute("style");
-
-    if (!currentValue || !currentValue.includes("url(")) {
-      return;
-    }
-
-    const nextValue = currentValue.replace(
-      /url\(\s*(["']?)([^"')]+)\1\s*\)/g,
-      (_match, _quote, url) => {
-        return `url("${versionAsset(url)}")`;
-      },
-    );
-
-    if (nextValue !== currentValue) {
-      node.setAttribute("style", nextValue);
-    }
-  });
-}
 
 function applySiteData() {
   document.querySelectorAll(selectors.bookingLinks).forEach((link) => {
@@ -213,114 +98,32 @@ function applySiteData() {
   }
 }
 
-function renderReviews() {
-  const reviewTrack = document.querySelector(selectors.reviewTrack);
+// Отзывы лежат в index.html, чтобы их видели поисковики; JS только открывает длинные в модальном окне.
+function getReviewFromCard(card) {
+  const readText = (selector) =>
+    card.querySelector(selector)?.textContent.trim() || "";
 
-  if (!reviewTrack) {
-    return;
-  }
-
-  reviewTrack.textContent = "";
-
-  const sortedReviews = [...siteData.reviews].sort(
-    (a, b) => parseReviewDate(b.date) - parseReviewDate(a.date),
-  );
-
-  sortedReviews.forEach((review) => {
-    const card = document.createElement("article");
-    card.className = "swiper-slide review-card";
-    card.setAttribute("data-reveal", "");
-
-    const meta = document.createElement("div");
-    meta.className = "review-meta";
-
-    const avatar = document.createElement("span");
-    avatar.className = "review-avatar";
-    avatar.setAttribute("aria-hidden", "true");
-    avatar.textContent = getInitials(review.name);
-
-    const author = document.createElement("div");
-    author.className = "review-author";
-
-    const name = document.createElement("span");
-    name.className = "review-name";
-    name.textContent = review.name;
-
-    const date = document.createElement("span");
-    date.className = "review-date";
-    date.textContent = review.date;
-
-    const stars = document.createElement("span");
-    stars.className = "review-stars";
-    stars.setAttribute("aria-label", `${review.rating} из 5`);
-    stars.textContent = getStars(review.rating);
-
-    const score = document.createElement("span");
-    score.className = "review-score";
-    score.textContent = `${review.rating}.0`;
-
-    const rating = document.createElement("div");
-    rating.className = "review-rating";
-    rating.append(stars, score);
-
-    const source = document.createElement("span");
-    source.className = "review-source";
-    source.textContent = review.source;
-
-    const body = document.createElement("div");
-    body.className = "review-body";
-
-    const text = document.createElement("p");
-    text.className = "review-text";
-    text.dataset.fullText = review.text;
-    text.textContent = review.text;
-
-    body.append(text);
-
-    if (review.text.length > 300) {
-      card.classList.add("has-long-review");
-
-      const more = document.createElement("button");
-      more.className = "review-more";
-      more.type = "button";
-      more.textContent = "Читать далее";
-      more.addEventListener("click", () => openReviewModal(review));
-
-      body.append(more);
-    }
-
-    author.append(name, date);
-    meta.append(avatar, author, rating);
-    card.append(meta, body, source);
-    reviewTrack.append(card);
-  });
+  return {
+    name: readText(".review-name"),
+    date: readText(".review-date"),
+    rating: Number(card.dataset.rating) || 5,
+    source: readText(".review-source"),
+    text: readText(".review-text"),
+  };
 }
 
-const reviewMonths = [
-  "января",
-  "февраля",
-  "марта",
-  "апреля",
-  "мая",
-  "июня",
-  "июля",
-  "августа",
-  "сентября",
-  "октября",
-  "ноября",
-  "декабря",
-];
+function initReviewCards() {
+  document.querySelectorAll(selectors.reviewCards).forEach((card) => {
+    const moreButton = card.querySelector(selectors.reviewMore);
 
-// Даты отзывов хранятся в виде «20 октября 2026»; нераспознанные уходят в конец.
-function parseReviewDate(value) {
-  const [day, month, year] = String(value).trim().toLowerCase().split(/\s+/);
-  const monthIndex = reviewMonths.indexOf(month);
+    if (!moreButton) {
+      return;
+    }
 
-  if (monthIndex === -1) {
-    return 0;
-  }
-
-  return new Date(Number(year), monthIndex, Number(day)).getTime() || 0;
+    moreButton.addEventListener("click", () => {
+      openReviewModal(getReviewFromCard(card));
+    });
+  });
 }
 
 function getInitials(name) {
@@ -621,27 +424,50 @@ function initLightGallery() {
     return;
   }
 
+  // lightGallery с миниатюрами при инициализации сразу грузит все превью,
+  // поэтому создаём его только при первом клике по фото.
   galleryEls.forEach((galleryEl) => {
     const isAchievementsGallery = galleryEl.matches(
       selectors.achievementsGallery,
     );
+    let galleryInstance = null;
 
-    lightGallery(galleryEl, {
-      selector: "a",
-      plugins: [window.lgZoom, window.lgThumbnail].filter(Boolean),
-      speed: 420,
-      download: false,
-      getCaptionFromTitleOrAlt: !isAchievementsGallery,
-      thumbnail: true,
-      animateThumb: true,
-      thumbWidth: 96,
-      thumbHeight: "72px",
-      mobileSettings: {
-        controls: true,
-        showCloseIcon: true,
-        download: false,
-      },
+    galleryEl.addEventListener("click", (event) => {
+      if (galleryInstance) {
+        return;
+      }
+
+      const item = event.target.closest("a");
+
+      if (!item || !galleryEl.contains(item)) {
+        return;
+      }
+
+      event.preventDefault();
+      galleryInstance = createLightGallery(galleryEl, isAchievementsGallery);
+
+      const items = Array.from(galleryEl.querySelectorAll("a"));
+      galleryInstance.openGallery(Math.max(0, items.indexOf(item)));
     });
+  });
+}
+
+function createLightGallery(galleryEl, isAchievementsGallery) {
+  return window.lightGallery(galleryEl, {
+    selector: "a",
+    plugins: [window.lgZoom, window.lgThumbnail].filter(Boolean),
+    speed: 420,
+    download: false,
+    getCaptionFromTitleOrAlt: !isAchievementsGallery,
+    thumbnail: true,
+    animateThumb: true,
+    thumbWidth: 96,
+    thumbHeight: "72px",
+    mobileSettings: {
+      controls: true,
+      showCloseIcon: true,
+      download: false,
+    },
   });
 }
 
@@ -738,9 +564,8 @@ function initReveal() {
   revealNodes.forEach((node) => observer.observe(node));
 }
 
-applyAssetVersions();
 applySiteData();
-renderReviews();
+initReviewCards();
 initHeroSlides();
 initHouseSwiper();
 prepareAchievementsGallery();
